@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missables, and a guide to each trophy in our own words.">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; unofficial fan guide</p>
+      <h1>Leonida Platinum</h1>
+      <p class="tagline">The offline trophy guide &amp; tracker for GTA VI — every trophy, a plan to the platinum, and nothing to install.</p>
+    </div>
+    <div class="platinum-card" id="platinum-card">
+      <p class="platinum-count"><span id="earned-count">0</span><span class="of"> / 55</span></p>
+      <p class="platinum-label">trophies earned</p>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="platinum-pct" id="progress-pct">0% to the platinum</p>
+      <p class="grade-line">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze</p>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Guide sections">
+    <a href="#/checklist" data-route="checklist">Checklist</a>
+    <a href="#/roadmap" data-route="roadmap">Roadmap to Platinum</a>
+    <a href="#/missables" data-route="missables">Missables</a>
+    <a href="#/next" data-route="next">Next up</a>
+    <a href="#/settings" data-route="settings">Settings</a>
+  </nav>
+</header>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="toolbar" role="search">
+      <label class="search-box">Search <input id="search" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="side-story">Side stories</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="exploration">Exploration</option>
+          <option value="combat">Combat</option>
+          <option value="money">Money</option>
+          <option value="misc">Everything else</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+      <label class="check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+      <label class="check" title="Hides the names and descriptions of story trophies until you earn them"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+      <span class="toolbar-spacer"></span>
+      <button id="export" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    </div>
+    <p class="list-meta" id="list-meta"></p>
+    <div class="layout">
+      <div class="list-col">
+        <ul class="trophy-list" id="trophy-list"></ul>
+        <p class="empty-note" id="empty-note" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+      </div>
+      <aside class="detail-col" id="detail-col" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">Six stages, in order, built from the official trophy descriptions. Story first, side strands before the endgame, then activities, collectibles, money and mayhem, and cleanup last. The platinum — <em>Vice Got a Price!</em> — pops when the other 54 are done.</p>
+    <div id="roadmap-body"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missables &amp; watch-outs</h2>
+    <p class="section-intro">These flags are built from the official trophy descriptions alone. Story missions themselves are <strong>not</strong> missable — they award their trophy on completion. What can close off is a side strand, a one-off challenge, or a choice you only get to make once. Where a flag is a guess rather than a certainty, the guide says so plainly.</p>
+    <div id="missables-body"></div>
+  </section>
+
+  <section id="view-next" class="view" hidden>
+    <h2>Next up</h2>
+    <p class="section-intro">What to chase next, picked from the roadmap: missables and open strands first, then the stage you are furthest through.</p>
+    <div id="next-body"></div>
+  </section>
+
+  <section id="view-settings" class="view" hidden>
+    <h2>Settings &amp; your save</h2>
+    <div id="settings-body"></div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are PlayStation's, as listed on <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a>; PSN progress targets (0/N) are from <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>. Every guide is this guide's own words, written from the official descriptions — anything not yet checked in the game is flagged as such. Links open only if you follow them; this app fetches nothing and works with the network off.</p>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Sony Interactive Entertainment, or PlayStation. No Rockstar logo or official artwork is used here. Progress is saved in this browser only (localStorage) — export it to keep a copy.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
