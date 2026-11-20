@@ -3,7 +3,7 @@
 // counts on screen always match the list.
 
 import { KIND_LABELS, STAGES, GRADE_ORDER } from './data.js';
-import { isEarned, progressOf, earnedCount, exportText, resetStore } from './store.js';
+import { isEarned, progressOf, earnedCount, exportText, importText, resetStore } from './store.js';
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -169,7 +169,6 @@ export function renderSettings(bodyEl, state, onStateChange, onSpoilersChange) {
   importInput.addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    const { importText } = await import('./store.js');
     const next = importText(await file.text());
     if (next) onStateChange(next);
     else alert('That file is not a Leonida Platinum export.');
