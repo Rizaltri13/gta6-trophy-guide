@@ -5,7 +5,7 @@
 const KEY = 'leonida-platinum-v1';
 
 function blank() {
-  return { earned: {}, progress: {}, notes: {}, spoilers: true };
+  return { earned: {}, progress: {}, notes: {}, spoilers: false };
 }
 
 export function loadStore() {
@@ -107,7 +107,7 @@ export function seedDemo(state) {
   ]) demo.earned[name] = true;
   demo.progress = { 15: 87, 17: 12, 31: 34, 35: 41, 42: 21 };
   demo.notes = { 17: 'Gold the pistol challenges first — they are the easiest.' };
-  demo.spoilers = true;
+  demo.spoilers = false;
   saveStore(demo);
   return demo;
 }
